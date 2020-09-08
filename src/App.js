@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Header from "./Header";
 import Articulo from "./Articulos";
 import Listado from "./Listado";
+import Api from "./components/Api";
 
 export default function App() {
   //listado de articulos
@@ -10,7 +11,7 @@ export default function App() {
     { id: 2, nombre: "tomates" },
     { id: 3, nombre: "cebolla" },
     { id: 4, nombre: "mangos" },
-    { id: 5, nombre: "aguacates" }
+    { id: 5, nombre: "aguacates" },
   ]);
 
   //listado del mandado
@@ -33,6 +34,7 @@ export default function App() {
       ))}
       <hr />
       <Listado listado={listado} setListado={setListado} />
+      <Api />
     </>
   );
 }
